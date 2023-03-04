@@ -63,7 +63,16 @@ namespace Try2Demo04032023.Windows
 
             if(_isNew)
             {
-                DataBaseManager.AddProduct(Product);
+                try
+                {
+                    DataBaseManager.AddProduct(Product);
+                }
+                catch
+                {
+                    MessageBox.Show("Проверьте заполненные данные!");
+                    return;
+                }
+                MessageBox.Show("Товар успешно добавлен!");
                 this.Close();
             }
             else
