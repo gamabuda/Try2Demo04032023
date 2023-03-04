@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LopushokWPF", "Try2Demo04032023\LopushokWPF.csproj", "{1448FBD6-B05E-4BBB-90B8-4FBFA1077262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LopushokCore", "LopushokCore\LopushokCore.csproj", "{37E966AD-28ED-40D7-9AAE-C818131E8201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1448FBD6-B05E-4BBB-90B8-4FBFA1077262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1448FBD6-B05E-4BBB-90B8-4FBFA1077262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1448FBD6-B05E-4BBB-90B8-4FBFA1077262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1448FBD6-B05E-4BBB-90B8-4FBFA1077262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E966AD-28ED-40D7-9AAE-C818131E8201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E966AD-28ED-40D7-9AAE-C818131E8201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E966AD-28ED-40D7-9AAE-C818131E8201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E966AD-28ED-40D7-9AAE-C818131E8201}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FEE7DF9-5DF2-4BEB-ADB7-BECD55FA9378}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,130 @@
+﻿<Window
+    x:Class="Try2Demo04032023.Windows.EditProductWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Try2Demo04032023.Windows"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Лопушок: Редактирование"
+    Width="600"
+    Height="580"
+    Closed="Window_Closed"
+    FontFamily="Gabriola"
+    FontSize="16"
+    Icon="/Resources/Лопушок.ico"
+    ResizeMode="NoResize"
+    TextElement.FontSize="16"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+
+    <Grid Background="#CEFFF9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <WrapPanel
+            Grid.Row="0"
+            Margin="0,16,0,0"
+            HorizontalAlignment="Center">
+            <Image Width="60" Source="/Resources/Лопушок.png" />
+            <Label
+                VerticalAlignment="Center"
+                Content="ЛОПУШОК"
+                FontWeight="Bold"
+                Foreground="#00CC76" />
+        </WrapPanel>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:Card
+                Grid.Column="0"
+                Margin="16,16,0,16"
+                Padding="16"
+                VerticalAlignment="Top">
+                <StackPanel VerticalAlignment="Center">
+                    <Image Margin="0,0,0,5" Source="/Resources/picture.png" />
+                    <Button
+                        x:Name="LoadImageBtn"
+                        Background="#00CC76"
+                        Click="LoadImageBtn_Click"
+                        Content="Загрузить новое"
+                        Style="{StaticResource MaterialDesignRaisedButton}" />
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card
+                Grid.Column="1"
+                Margin="16"
+                Padding="16">
+                <StackPanel x:Name="ProductSP">
+                    <TextBox
+                        x:Name="IdTB"
+                        Margin="0,0,0,4"
+                        materialDesign:HintAssist.Hint="Артикул"
+                        Text="{Binding ArticleNumber}" />
+                    <TextBox
+                        x:Name="NameTB"
+                        Margin="0,0,0,4"
+                        materialDesign:HintAssist.Hint="Наимнование"
+                        Text="{Binding Title}" />
+                    <ComboBox
+                        x:Name="TypeCB"
+                        Margin="0,0,0,4"
+                        materialDesign:HintAssist.Hint="Тип продукта"
+                        DisplayMemberPath="Title"
+                        SelectedItem="{Binding ProductType, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox
+                        x:Name="CountPersonTB"
+                        Margin="0,0,0,4"
+                        materialDesign:HintAssist.Hint="Кол-во человек  для производства"
+                        Text="{Binding ProductionPersonCount}" />
+                    <TextBox
+                        x:Name="ManufactorTB"
+                        Margin="0,0,0,4"
+                        materialDesign:HintAssist.Hint="Номер производственного цеха"
+                        Text="{Binding ProductionPersonCount}" />
+                    <TextBox
+                        x:Name="PriceTB"
+                        Margin="0,0,0,4"
+                        materialDesign:HintAssist.Hint="Минимальная стоимость для агента"
+                        Text="{Binding MinCostForAgent}"
+                        TextChanged="PriceTB_TextChanged" />
+                    <TextBox
+                        x:Name="DescriptionTB"
+                        Height="105"
+                        Margin="0,0,0,4"
+                        VerticalAlignment="Top"
+                        materialDesign:HintAssist.Hint="Описание"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                        Text="{Binding Description}"
+                        TextWrapping="Wrap"
+                        VerticalScrollBarVisibility="Auto" />
+                    <WrapPanel>
+                        <Button
+                            x:Name="SaveBtn"
+                            Margin="0,0,5,0"
+                            Background="#00CC76"
+                            Click="SaveBtn_Click"
+                            Content="Сохранить"
+                            Style="{StaticResource MaterialDesignRaisedButton}" />
+                        <Button
+                            x:Name="DeleteBtn"
+                            Background="Red"
+                            BorderBrush="DarkRed"
+                            Content="Удалить"
+                            Foreground="White"
+                            Style="{StaticResource MaterialDesignRaisedButton}" />
+                    </WrapPanel>
+                </StackPanel>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>
